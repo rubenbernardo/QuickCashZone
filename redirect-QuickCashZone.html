@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redirecting...</title>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f1f1f1;
+        text-align: center;
+        padding-top: 100px;
+      }
+      h2 {
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Verifying your access to QuickCashZone...</h2>
+    <p>Please wait while we match the best offer for your country.</p>
+
+    <script>
+      fetch("https://ipapi.co/json")
+        .then(res => res.json())
+        .then(data => {
+          const country = data.country;
+
+          // TapMob offer for the top countries
+          const buymeacoffeeLink = "https://buymeacoffee.com/rubenbernardoer/e/440582";
+          // India, Pakistan & country offers (same destination)
+      const asiaLink = "https://www.directcpi.com/unlock/53525";
+
+          if (["US", "CA", "GB", "DE", "AU", "NL", "NO", "SE"].includes(country)) {
+            window.location.href = buymeacoffeeLink;
+         } else if (["PK", "IN", "ZA", "MA"].includes(country)) {
+        window.location.href = asiaLink;
+          } else {
+            window.location.href = "https://rockingfolders.com/affiliatemarketingschooler";
+          }
+        });
+    </script>
+  </body>
+</html>
