@@ -25,17 +25,43 @@
         .then(data => {
           const country = data.country;
 
-          // TapMob offer for the top countries
-          const buymeacoffeeLink = "https://buymeacoffee.com/rubenbernardoer/e/440582";
-          // India, Pakistan & country offers (same destination)
-      const asiaLink = "https://www.directcpi.com/unlock/53525";
+          // Country-specific links
+          const USLink = "https://lnksforyou.com/view.php?id=5541776&pub=2773832";
+          const CALink = "https://yourlink-for-canada.com";
+          const GBLink = "https://directcpi.com/view.php?id=5541818&pub=2773832";
+          const DELink = "https://yourlink-for-germany.com";
+          const AULink = "https://lnksforyou.com/view.php?id=5541819&pub=2773832";
+          const NLLink = "https://yourlink-for-netherlands.com";
+          const NOLink = "https://yourlink-for-norway.com";
+          const SELink = "https://yourlink-for-sweden.com";
 
-          if (["US", "CA", "GB", "DE", "AU", "NL", "NO", "SE"].includes(country)) {
-            window.location.href = buymeacoffeeLink;
-         } else if (["PK", "IN", "ZA", "MA"].includes(country)) {
-        window.location.href = asiaLink;
+          // India, Pakistan, South Africa, Morocco
+          const asiaLink = "https://www.directcpi.com/unlock/53525";
+
+          // Fallback (CPAgrip smartlink)
+          const fallbackLink = "https://rockingfolders.com/quickcashzone";
+
+          // Redirect logic
+          if (country === "US") {
+            window.location.href = USLink;
+          } else if (country === "CA") {
+            window.location.href = CALink;
+          } else if (country === "GB") {
+            window.location.href = GBLink;
+          } else if (country === "DE") {
+            window.location.href = DELink;
+          } else if (country === "AU") {
+            window.location.href = AULink;
+          } else if (country === "NL") {
+            window.location.href = NLLink;
+          } else if (country === "NO") {
+            window.location.href = NOLink;
+          } else if (country === "SE") {
+            window.location.href = SELink;
+          } else if (["PK", "IN", "ZA", "MA"].includes(country)) {
+            window.location.href = asiaLink;
           } else {
-            window.location.href = "https://rockingfolders.com/affiliatemarketingschooler";
+            window.location.href = fallbackLink;
           }
         });
     </script>
